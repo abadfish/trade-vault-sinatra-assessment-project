@@ -4,7 +4,8 @@ class CreateTrades < ActiveRecord::Migration
       t.string :direction
       t.integer :size
       t.string :product
-      t.datetime :trade_date
+      t.date :trade_date
+      t.integer :user_id
     end
   end
 end

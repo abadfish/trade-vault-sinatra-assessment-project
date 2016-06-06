@@ -1,0 +1,16 @@
+<h1>Edit Trade # <%= @trade.id %></h1>
+
+  <form action="/trades/<%= @trade.id %>" method="POST">
+    <input id="hidden" type="hidden" name="_method" value="patch">
+
+    <h3>Buy/Sell: <input id="direction" type="text" name="direction" value="<%= @trade.direction %>"></input></h3>
+
+    <h3>Size: <input id="size" type="text" name="size" value="<%= @trade.size %>"></input></h3>
+
+    <h3>Product: <input id="product" type="text" name="product" value="<%= @trade.product %>"></input></h3>
+
+    <h3>Trade Date: <input id="trade_date" type="text" name="trade_date" value="<%= @trade.trade_date %>"></input></h3>
+
+
+    <p><input type="submit" value="submit"></p>
+  </form>

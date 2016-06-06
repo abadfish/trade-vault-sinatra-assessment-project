@@ -1,0 +1,14 @@
+<h1>Welcome, <%= current_user.username %></h1>
+
+<h2>Current Positions: </h2>
+<% Trade.all.each do |trade| %>
+  <p><a href="/trades/<%= trade.id %>"><%= trade.direction %> <%= trade.size %> <%= trade.product %> <%= trade.trade_date %></a></p>
+<% end %>
+
+<form action="trades/new" method="GET">
+  <p><input type="submit" value="New Trade"></p>
+</form>
+
+<form action="/logout" method="GET">
+  <p><input type="submit" value="Log Out"></p>
+</form>
