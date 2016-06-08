@@ -46,6 +46,8 @@ class TradesController < ApplicationController
       if session[:user_id] == @trade.user_id
         erb :'/trades/edit_trade'
       else
+        flash[:message] = "Not your trade, bro."
+        
         redirect "/trades"
       end
     else
