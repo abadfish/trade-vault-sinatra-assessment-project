@@ -1,6 +1,6 @@
 <h1>Trade #<%= @trade.id %></h1>
 
-<h4><%= @trade.direction %> <%= @trade.size %> <%= @trade.product %> <%= @trade.trade_date %></h4>
+<h4><%= @trade.direction %> <%= @trade.size %> <%= @trade.product %> <%= @trade.price %> <%= @trade.trade_date %></h4>
 
 <form action="/trades/<%= @trade.id %>/edit" method="get">
   <p><input type="submit" value="Edit Trade"></p>

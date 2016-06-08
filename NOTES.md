@@ -21,7 +21,15 @@ Or also see others' trades but only modify their own
 Can there be a shared tradebook?
 
 Aggregater. If you add to an existing position, the app adds it for you by editing the exisiting position
+if @trade.product == Trade.find_by(params[:product])
 
 -make tables for trades, with recent closing prices and current value
 
 -chart trades?
+
+-put which trader made the trades next to the trade.
+
+
+
+
+scrape from http://www.barchart.com/chart.php?sym=ESU16&t=BAR&size=M&v=2&g=1&p=I:5&d=L&qb=1&style=technical&template=

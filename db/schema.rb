@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160605123110) do
+ActiveRecord::Schema.define(version: 20160608001758) do
 
   create_table "trades", force: :cascade do |t|
     t.string  "direction"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20160605123110) do
     t.string  "product"
     t.date    "trade_date"
     t.integer "user_id"
+    t.decimal "price"
   end
 
   create_table "users", force: :cascade do |t|

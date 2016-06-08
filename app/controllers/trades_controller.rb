@@ -13,14 +13,11 @@ class TradesController < ApplicationController
 
   post '/trades' do
     if is_logged_in?
-      if params[:content] != ""
-        @trade = Trade.create(params)
-        @trade.user_id = current_user.id
-        @trade.save
-        redirect "/trades/#{@trade.id}"
-      else
-        redirect '/trades/new'
-      end
+      @trade = Trade.create(params)
+      @trade.direction = params[:direction].downcase
+      @trade.user_id = current_user.id
+      @trade.save
+      redirect "/trades/#{@trade.id}"
     else
       redirect '/login'
     end
@@ -59,7 +56,11 @@ class TradesController < ApplicationController
   patch '/trades/:id' do
     if params[:product] != ""
       @trade = Trade.find_by_id(params[:id])
+      @trade.direction = params[:direction].downcase
       @trade.size = params[:size]
+      @trade.product = params[:product]
+      @trade.trade_date = params[:trade_date]
+      @trade.price = params[:price]
       @trade.save
       redirect "/trades/#{@trade.id}"
     else
