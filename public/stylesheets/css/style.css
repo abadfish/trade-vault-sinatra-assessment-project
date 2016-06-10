@@ -81,7 +81,7 @@ html {
 }*/
 
 body {
-  background: url('../css/images/home-bg.jpg') center no-repeat;
+  background: url('../css/images/matrix.gif') center no-repeat;
   background-size: cover;
   background-attachment: fixed;
   font-family: "Courier New", Arial, sans-serif;
@@ -97,7 +97,7 @@ body {
 
 #content {
   padding: 20px;
-  background: rgba(0,0,0,.75);
+  background: rgba(0,0,0,.85);
   color: rgb(57,255,20);
 }
 
@@ -140,7 +140,7 @@ h1 {
     font-size: 2em;
     font-weight: bold;
     margin: 0.67em 0;
-    color: rgb(0,0,0);
+    color: rgb(255, 255, 147);
 }
 
 h2 {
