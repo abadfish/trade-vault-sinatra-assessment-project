@@ -1,0 +1,16 @@
+<h1><%= @user.username %>'s Open Trades</h1>
+<div id="content">
+  <% @trades.all.each do |trade|%>
+    <p>
+    <% if trade.direction.downcase == "buy" %>
+      Long <%= trade.size %> <%= trade.product %> @ <%= trade.price %> <%= trade.trade_date %>
+    <% elsif trade.direction.downcase == "sell" %>
+      Short <%= trade.size %> <%= trade.product %> @ <%= trade.price %> <%= trade.trade_date %>
+    <% end %>
+    </p>
+  <% end %>
+
+  <form action="/trades" method="get">
+    <input type="submit" value="Back to Book">
+  </form>
+</div>

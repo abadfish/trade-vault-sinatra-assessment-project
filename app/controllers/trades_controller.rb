@@ -47,7 +47,7 @@ class TradesController < ApplicationController
         erb :'/trades/edit_trade'
       else
         flash[:message] = "Not your trade, bro."
-        
+
         redirect "/trades"
       end
     else
@@ -80,5 +80,10 @@ class TradesController < ApplicationController
     end
   end
 
+  get '/users/:id/trades' do
+    @user = User.find(params[:id])
+    @trades = @user.trades
+    erb :'/trades/show_users_trades'
+  end
 
 end

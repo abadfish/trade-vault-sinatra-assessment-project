@@ -2,7 +2,7 @@
   <div id="content">
     <h2>All Open Positions: </h2>
     <% Trade.all.each do |trade| %>
-      <h3> Trader <%= trade.user_id %> </h3>
+      <h3><a href="/users/<%= trade.user_id %>/trades"> Trader: <%= trade.user.username %> </a></h3>
       <p><a href="/trades/<%= trade.id %>"><%= trade.id %>>>></a>
         <% if trade.direction.downcase == "buy" %>
           Long <%= trade.size %> <%= trade.product %> @ <%= trade.price %> <%= trade.trade_date %>
