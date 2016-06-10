@@ -72,13 +72,32 @@ html {
  * Remove default margin.
  */
 
-body {
+/*body {
     margin-left: 8em;
     margin-top: 4em;
     background: rgb(0, 0, 0);
     color: rgb(57,255,20);
     font-weight: lighter;
+}*/
+
+body {
+  background: url('../css/images/home-bg.jpg') center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: Helvetica, Arial, sans-serif;
+  color: rgb(57,255,20);
+  font-size: 100%;
 }
+
+.wrapper {
+  margin: 0 auto;
+  width: 60%;
+  padding-bottom: 40px;
+}
+
+#content {
+  padding: 20px;
+  background: rgba(0,0,0,.75);
 
 /* ==========================================================================
    Links
@@ -119,6 +138,7 @@ h1 {
     font-size: 2em;
     font-weight: lighter;
     margin: 0.67em 0;
+    color: rgb(0,0,0);
 }
 
 h2 {
