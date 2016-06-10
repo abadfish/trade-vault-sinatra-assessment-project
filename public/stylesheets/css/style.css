@@ -84,7 +84,7 @@ body {
   background: url('../css/images/home-bg.jpg') center no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Courier New", Arial, sans-serif;
 
   font-size: 100%;
 }
@@ -138,7 +138,7 @@ a {
 
 h1 {
     font-size: 2em;
-    font-weight: normal;
+    font-weight: bold;
     margin: 0.67em 0;
     color: rgb(0,0,0);
 }
