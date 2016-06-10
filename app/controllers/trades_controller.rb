@@ -80,10 +80,13 @@ class TradesController < ApplicationController
     end
   end
 
-  get '/users/:id/trades' do
+  get '/users/:id/trades' do #get request from a link on trades.erb
     @user = User.find(params[:id])
+    #finds the user by id and saves it to an instance method
     @trades = @user.trades
+    #saves the users trades as another instance method to use in the view
     erb :'/trades/show_users_trades'
+    #renders the show page for a users trades
   end
 
 end
